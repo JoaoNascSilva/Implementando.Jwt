@@ -1,10 +1,8 @@
-using System.IO.Compression;
-using System.Security.Cryptography.X509Certificates;
+using Implementando.Jwt.Model.Enum;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
-namespace Implementando.Jwt
+namespace Implementando.Jwt.Services
 {
     public static class UserServices
     {
@@ -14,9 +12,9 @@ namespace Implementando.Jwt
         {
             _userList = new List<User>()
             {
-                new User("Roberto Mariano de Souza", "souzaroberto", "123456", (int)ERole.VENDEDOR),
-                new User("Tauriel Gaus", "gaustauriel", "789456", (int)ERole.RECEPCIONISTA),
-                new User("Maria Cristina", "cristinamaria", "147258", (int)ERole.DIRETOR),
+                new User("Roberto Mariano de Souza", "souzaroberto", "123456", "salesman"),
+                new User("Tauriel Gaus", "gaustauriel", "789456", "salesmanager"),
+                new User("Maria Cristina", "cristinamaria", "147258", "director"),
             };
         }
 
